@@ -10,9 +10,6 @@
     <Compile Update="Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="PassTestControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Update="PassTestForm.cs">
       <SubType>Form</SubType>
     </Compile>

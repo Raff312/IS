@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
 using Lab2.Models;
@@ -12,7 +13,7 @@ namespace Lab2 {
         private int _currentPanelIndex = 0;
 
         public PassTestForm() {
-            _test = new Test();
+            _test = new Test("Бикмаев");
             _panels = new List<Panel>();
             InitializeComponent();
         }
@@ -103,6 +104,7 @@ namespace Lab2 {
 
         private void btnNext_Click(object sender, EventArgs e) {
             if (_currentPanelIndex == _panels.Count - 1) {
+                _test.CompleteTest();
                 ShowCompleteTestPage();
                 return;
             }
@@ -118,10 +120,14 @@ namespace Lab2 {
         }
 
         private void ShowCompleteTestPage() {
-            lblCountOfQuestions.Text = _test.Questions.Count.ToString();
-            lblCountOfMistakes.Text = _test.GetCountOfMistakes().ToString();
-
             var mistakenQuestions = _test.GetMistakenQuestions();
+
+            lblLastName.Text = _test.LastName;
+            lblDate.Text = _test.Date.ToString("F", CultureInfo.CreateSpecificCulture("ru-RU"));
+            lblTheme.Text = _test.Theme;
+            lblCountOfQuestions.Text = _test.Questions.Count.ToString();
+            lblCountOfMistakes.Text = (_test.Questions.Count - mistakenQuestions.Count).ToString();
+
             var y = 0;
             for(var i = 0; i < mistakenQuestions.Count; i++) {
                 var question = mistakenQuestions[i];
