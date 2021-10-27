@@ -128,6 +128,20 @@ namespace Lab2 {
             lblCountOfQuestions.Text = _test.Questions.Count.ToString();
             lblCountOfMistakes.Text = (_test.Questions.Count - mistakenQuestions.Count).ToString();
 
+            var ratio = (double)(_test.Questions.Count - mistakenQuestions.Count) / _test.Questions.Count;
+            var point = 0;
+            if (ratio > 0.86) {
+                point = 5;
+            } else if (ratio > 0.71) {
+                point = 4;
+            } else if (ratio > 56) {
+                point = 3;
+            } else {
+                point = 2;
+            }
+
+            lblPoint.Text = point.ToString();
+
             var y = 0;
             for(var i = 0; i < mistakenQuestions.Count; i++) {
                 var question = mistakenQuestions[i];

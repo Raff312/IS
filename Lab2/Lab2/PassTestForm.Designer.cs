@@ -28,18 +28,20 @@ namespace Lab2 {
             this.btnPrev = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
             this.panelComplete = new System.Windows.Forms.Panel();
+            this.lblTheme = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.lblLastName = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panelMiskatesInfo = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.lblCountOfMistakes = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblCountOfQuestions = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.lblLastName = new System.Windows.Forms.Label();
-            this.lblDate = new System.Windows.Forms.Label();
-            this.lblTheme = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lblPoint = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelComplete.SuspendLayout();
             this.SuspendLayout();
@@ -86,6 +88,8 @@ namespace Lab2 {
             // 
             this.panelComplete.AutoScroll = true;
             this.panelComplete.BackColor = System.Drawing.Color.White;
+            this.panelComplete.Controls.Add(this.lblPoint);
+            this.panelComplete.Controls.Add(this.label7);
             this.panelComplete.Controls.Add(this.lblTheme);
             this.panelComplete.Controls.Add(this.lblDate);
             this.panelComplete.Controls.Add(this.lblLastName);
@@ -103,6 +107,57 @@ namespace Lab2 {
             this.panelComplete.Name = "panelComplete";
             this.panelComplete.Size = new System.Drawing.Size(950, 613);
             this.panelComplete.TabIndex = 1;
+            // 
+            // lblTheme
+            // 
+            this.lblTheme.AutoSize = true;
+            this.lblTheme.Location = new System.Drawing.Point(71, 59);
+            this.lblTheme.Name = "lblTheme";
+            this.lblTheme.Size = new System.Drawing.Size(0, 20);
+            this.lblTheme.TabIndex = 11;
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.Location = new System.Drawing.Point(68, 37);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(0, 20);
+            this.lblDate.TabIndex = 10;
+            // 
+            // lblLastName
+            // 
+            this.lblLastName.AutoSize = true;
+            this.lblLastName.Location = new System.Drawing.Point(100, 13);
+            this.lblLastName.Name = "lblLastName";
+            this.lblLastName.Size = new System.Drawing.Size(0, 20);
+            this.lblLastName.TabIndex = 9;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(13, 61);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(51, 20);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Тема: ";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(13, 37);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(48, 20);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Дата: ";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(13, 13);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(80, 20);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Фамилия: ";
             // 
             // panelMiskatesInfo
             // 
@@ -157,56 +212,22 @@ namespace Lab2 {
             this.label1.TabIndex = 0;
             this.label1.Text = "Количество вопросов: ";
             // 
-            // label4
+            // label7
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 13);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 20);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Фамилия: ";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(772, 24);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(64, 20);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Оценка:";
             // 
-            // label5
+            // lblPoint
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 37);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 20);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Дата: ";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 61);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 20);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Тема: ";
-            // 
-            // lblLastName
-            // 
-            this.lblLastName.AutoSize = true;
-            this.lblLastName.Location = new System.Drawing.Point(100, 13);
-            this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(0, 20);
-            this.lblLastName.TabIndex = 9;
-            // 
-            // lblDate
-            // 
-            this.lblDate.AutoSize = true;
-            this.lblDate.Location = new System.Drawing.Point(68, 37);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(0, 20);
-            this.lblDate.TabIndex = 10;
-            // 
-            // lblTheme
-            // 
-            this.lblTheme.AutoSize = true;
-            this.lblTheme.Location = new System.Drawing.Point(71, 59);
-            this.lblTheme.Name = "lblTheme";
-            this.lblTheme.Size = new System.Drawing.Size(0, 20);
-            this.lblTheme.TabIndex = 11;
+            this.lblPoint.AutoSize = true;
+            this.lblPoint.Location = new System.Drawing.Point(836, 24);
+            this.lblPoint.Name = "lblPoint";
+            this.lblPoint.Size = new System.Drawing.Size(0, 20);
+            this.lblPoint.TabIndex = 13;
             // 
             // PassTestForm
             // 
@@ -244,5 +265,7 @@ namespace Lab2 {
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblPoint;
     }
 }
