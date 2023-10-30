@@ -10,7 +10,7 @@ namespace Lab2 {
     public partial class PassTestForm : Form {
         private readonly Test _test;
         private readonly List<Panel> _panels;
-        private int _currentPanelIndex = 0;
+        private int _currentPanelIndex;
 
         public PassTestForm() {
             _test = new Test("Бикмаев");
@@ -28,8 +28,8 @@ namespace Lab2 {
                 var y = 0;
 
                 var panel = new Panel {
-                    Tag = $"panelForQuestion{i}", 
-                    Location = new Point(0, 0), 
+                    Tag = $"panelForQuestion{i}",
+                    Location = new Point(0, 0),
                     Dock = DockStyle.Fill,
                     Visible = false,
                     BackColor = Color.White
@@ -125,8 +125,8 @@ namespace Lab2 {
             lblLastName.Text = _test.LastName;
             lblDate.Text = _test.Date.ToString("F", CultureInfo.CreateSpecificCulture("ru-RU"));
             lblTheme.Text = _test.Theme;
-            lblCountOfQuestions.Text = _test.Questions.Count.ToString();
-            lblCountOfMistakes.Text = (_test.Questions.Count - mistakenQuestions.Count).ToString();
+            lblCountOfQuestions.Text = _test.Questions.Count.ToString(CultureInfo.InvariantCulture);
+            lblCountOfMistakes.Text = (_test.Questions.Count - mistakenQuestions.Count).ToString(CultureInfo.InvariantCulture);
 
             var ratio = (double)(_test.Questions.Count - mistakenQuestions.Count) / _test.Questions.Count;
             var point = 0;
@@ -140,7 +140,7 @@ namespace Lab2 {
                 point = 2;
             }
 
-            lblPoint.Text = point.ToString();
+            lblPoint.Text = point.ToString(CultureInfo.InvariantCulture);
 
             var y = 0;
             for(var i = 0; i < mistakenQuestions.Count; i++) {
@@ -174,7 +174,7 @@ namespace Lab2 {
                     AutoSize = true,
                     Location = new Point(10, y + labelQuestion.Height)
                 };
-                
+
                 var labelRightAnswer = new Label {
                     Text = $@"Правильные ответы: {string.Join(", ", question.RightAnswers.Select(ConvertNumberToVariant).ToHashSet())}",
                     AutoSize = true,
